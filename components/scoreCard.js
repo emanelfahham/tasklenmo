@@ -1,11 +1,12 @@
 import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import general from '../styles/generalstyles';
 
 const ScoreCard = (props) => {
     return(
         <View style={{marginEnd: '7%'}}>
-            <Text style={styles.titletext}>{props.title}</Text>
+            <Text style={general.greyText}>{props.title}</Text>
             <View style={{flexDirection: 'row'}}>
                 <Image
                 style={styles.imageStyle} 
@@ -18,11 +19,6 @@ const ScoreCard = (props) => {
 }
 
 const styles = StyleSheet.create({
-    titletext: {
-        color: 'grey',
-        fontSize: 13,
-        fontWeight: '600'
-    },
     imageStyle:{
         resizeMode: 'contain',
         height: 20, 
